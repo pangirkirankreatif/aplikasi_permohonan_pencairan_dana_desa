@@ -4,52 +4,44 @@ Nama Database: (Kreasi Sender Ex: _db_permohonan_dd)
 Structure Table:
 ================================================================
 - Table:  _tbl_file_permohonan
-  `id` bigint(20) NOT NULL,
-  `kd_permohonan` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `file` text COLLATE utf8_unicode_ci NOT NULL,
-  `sts` enum('0','1','2') COLLATE utf8_unicode_ci NOT NULL DEFAULT '0'
+          `id` bigint(20) NOT NULL,
+          `kd_permohonan` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+          `file` text COLLATE utf8_unicode_ci NOT NULL,
+          `sts` enum('0','1','2') COLLATE utf8_unicode_ci NOT NULL DEFAULT '0'
           
 ----------------------------------------------------------------
 - Table:  _tbl_file_permohonan
 
-  `id` bigint(20) NOT NULL,
-  `kd_permohonan` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `kd_kec` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `kd_desa` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `thn_anggaran` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
-  `pagu_anggaran` double NOT NULL,
-  `judul_anggaran` text COLLATE utf8_unicode_ci NOT NULL,
-  `isi_permohonan` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `no_surat` varchar(90) COLLATE utf8_unicode_ci NOT NULL,
-  `tgl_surat` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `no_rekening` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `file` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `status` enum('0','1') COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `modify_by` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `modify_date` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `is_trash` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `jenis_permohonan` enum('ADD','DD','BHP','BHR') COLLATE utf8_unicode_ci DEFAULT NULL,
-  `tahap` varchar(45) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Tahap I, Tahap II, Tahap III, Tahap IV'
+          `id` bigint(20) NOT NULL,
+          `kd_permohonan` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+          `kd_kec` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+          `kd_desa` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+          `thn_anggaran` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
+          `pagu_anggaran` double NOT NULL,
+          `judul_anggaran` text COLLATE utf8_unicode_ci NOT NULL,
+          `isi_permohonan` longtext COLLATE utf8_unicode_ci NOT NULL,
+          `no_surat` varchar(90) COLLATE utf8_unicode_ci NOT NULL,
+          `tgl_surat` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+          `no_rekening` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+          `file` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+          `status` enum('0','1') COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
+          `modify_by` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+          `modify_date` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+          `is_trash` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
+          `jenis_permohonan` enum('ADD','DD','BHP','BHR') COLLATE utf8_unicode_ci DEFAULT NULL,
+          `tahap` varchar(45) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Tahap I, Tahap II, Tahap III, Tahap IV'
   
   ===========================================================================================================
-  - Table: _tbl_permohonan
+  - Table: _tbl_user
   
-  `id` int(11) NOT NULL,
-  `user_id` varchar(25) NOT NULL,
-  `email` varchar(255) NOT NULL DEFAULT '',
-  `password` varchar(35) NOT NULL,
-  `no_hp` varchar(35) NOT NULL,
-  `nama` varchar(45) NOT NULL,
-  `level` enum('1','2','3','4') NOT NULL,
-  `info_log` varchar(255) DEFAULT NULL,
-  `status` enum('Y','T') DEFAULT 'T',
-  `ip` varchar(35) DEFAULT NULL,
-  `foto` varchar(100) DEFAULT NULL,
-  `user_role` varchar(200) NOT NULL,
-  `created_date` varchar(25) NOT NULL,
-  `last_login` varchar(45) DEFAULT NULL,
-  `platform_agent` text DEFAULT NULL
+          `id` int(11) NOT NULL,
+          `user_id` varchar(25) NOT NULL,
+          `email` varchar(255) NOT NULL DEFAULT '',
+          `password` varchar(35) NOT NULL,
+          `no_hp` varchar(35) NOT NULL,
+          `nama` varchar(45) NOT NULL,
   
+  ===========================================================================================================
   
   
   - Table: _tbl_ta (Tabel Tahun Anggaran)
