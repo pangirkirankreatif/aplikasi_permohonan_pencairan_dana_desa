@@ -4,11 +4,10 @@ Nama Database: (Kreasi Sender Ex: _db_permohonan_dd)
 Structure Table:
 ================================================================
 - Table:  _tbl_file_permohonan
-
-          id				    int(11) auto_increment primary_key
-          kd_permohonan varchar(20) NOT NULL
-          file          text
-          sts           enum('0','1')
+  `id` bigint(20) NOT NULL,
+  `kd_permohonan` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `file` text COLLATE utf8_unicode_ci NOT NULL,
+  `sts` enum('0','1','2') COLLATE utf8_unicode_ci NOT NULL DEFAULT '0'
           
 ----------------------------------------------------------------
 - Table:  _tbl_file_permohonan
